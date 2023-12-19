@@ -225,9 +225,13 @@ class Markjs {
             width,
             height
         } = this.elRectInfo
+        if(this.opt.canvasWidth) width = this.opt.canvasWidth;
+        if(this.opt.canvasHeight) height = this.opt.canvasHeight;
+        this.canvasEle.style.width = width+"px"
+        this.canvasEle.style.height = height+"px"
         this.canvasEle = document.createElement('canvas')
-        this.canvasEle.width = width
-        this.canvasEle.height = height
+        this.canvasEle.width =  width 
+        this.canvasEle.height =  height
         this.canvasEleRectInfo = {
             width,
             height
